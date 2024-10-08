@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>automação.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+automação.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">pyautogui</span>
+<span class="s0">import </span><span class="s1">time</span>
+<span class="s0">import </span><span class="s1">pandas</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">PAUSE</span><span class="s2">= </span><span class="s3">1.5</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">hotkey</span><span class="s2">(</span><span class="s4">'win'</span><span class="s2">, </span><span class="s4">'3'</span><span class="s2">)</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">hotkey</span><span class="s2">(</span><span class="s4">'Ctrl'</span><span class="s2">, </span><span class="s4">'t'</span><span class="s2">)</span>
+
+<span class="s5">#pyautogui.write('Chr')</span>
+<span class="s5">#pyautogui.press('enter')</span>
+
+<span class="s1">time</span><span class="s2">.</span><span class="s1">sleep</span><span class="s2">(</span><span class="s3">1</span><span class="s2">)</span>
+
+<span class="s5">#pyautogui.press('tab')</span>
+
+<span class="s5">#pyautogui.press('enter')</span>
+
+<span class="s1">time</span><span class="s2">.</span><span class="s1">sleep</span><span class="s2">(</span><span class="s3">1</span><span class="s2">)</span>
+
+<span class="s5">#</span>
+<span class="s5">#   pyautogui.hotkey('Ctrl', 'l')</span>
+
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s4">'https://dlp.hashtagtreinamentos.com/python/intensivao/login'</span><span class="s2">)</span>
+
+<span class="s1">time</span><span class="s2">.</span><span class="s1">sleep</span><span class="s2">(</span><span class="s3">1</span><span class="s2">)</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'enter'</span><span class="s2">)</span>
+
+<span class="s1">time</span><span class="s2">.</span><span class="s1">sleep</span><span class="s2">(</span><span class="s3">1</span><span class="s2">)</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">click</span><span class="s2">(</span><span class="s1">x</span><span class="s2">=</span><span class="s3">691</span><span class="s2">, </span><span class="s1">y</span><span class="s2">=</span><span class="s3">547</span><span class="s2">)</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s4">'eliasaramburu@gmail.com'</span><span class="s2">)</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s4">'12345'</span><span class="s2">)</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'enter'</span><span class="s2">)</span>
+
+
+<span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">click</span><span class="s2">(</span><span class="s1">x</span><span class="s2">=</span><span class="s3">653</span><span class="s2">, </span><span class="s1">y</span><span class="s2">=</span><span class="s3">437</span><span class="s2">)</span>
+
+<span class="s1">tabela </span><span class="s2">= </span><span class="s1">pandas</span><span class="s2">.</span><span class="s1">read_csv</span><span class="s2">(</span><span class="s4">'produtos (2).csv'</span><span class="s2">)</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s1">tabela</span><span class="s2">)</span>
+
+<span class="s5">#linha = 0  6.5</span>
+
+<span class="s0">for </span><span class="s1">linha </span><span class="s0">in </span><span class="s1">tabela</span><span class="s2">.</span><span class="s1">index</span><span class="s2">:</span>
+
+
+    <span class="s5">#cód produto</span>
+    <span class="s1">cod </span><span class="s2">= </span><span class="s1">tabela</span><span class="s2">.</span><span class="s1">loc</span><span class="s2">[</span><span class="s1">linha</span><span class="s2">, </span><span class="s4">'codigo'</span><span class="s2">]</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s1">str</span><span class="s2">(</span><span class="s1">cod</span><span class="s2">))</span>
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+    <span class="s5">#marca produto</span>
+    <span class="s1">marca </span><span class="s2">= </span><span class="s1">tabela</span><span class="s2">.</span><span class="s1">loc</span><span class="s2">[</span><span class="s1">linha</span><span class="s2">, </span><span class="s4">'marca'</span><span class="s2">]</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s1">str</span><span class="s2">(</span><span class="s1">marca</span><span class="s2">))</span>
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+    <span class="s5">#tipo produto</span>
+    <span class="s1">tipo </span><span class="s2">= </span><span class="s1">tabela</span><span class="s2">.</span><span class="s1">loc</span><span class="s2">[</span><span class="s1">linha</span><span class="s2">, </span><span class="s4">'tipo'</span><span class="s2">]</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s1">str</span><span class="s2">(</span><span class="s1">tipo</span><span class="s2">))</span>
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+    <span class="s5">#categoria produto</span>
+    <span class="s1">categoria </span><span class="s2">= </span><span class="s1">tabela</span><span class="s2">.</span><span class="s1">loc</span><span class="s2">[</span><span class="s1">linha</span><span class="s2">, </span><span class="s4">'categoria'</span><span class="s2">]</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s1">str</span><span class="s2">(</span><span class="s1">categoria</span><span class="s2">))</span>
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+    <span class="s5">#preço produto</span>
+    <span class="s1">preco </span><span class="s2">= </span><span class="s1">tabela</span><span class="s2">.</span><span class="s1">loc</span><span class="s2">[</span><span class="s1">linha</span><span class="s2">, </span><span class="s4">'preco_unitario'</span><span class="s2">]</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s1">str</span><span class="s2">(</span><span class="s1">preco</span><span class="s2">))</span>
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+
+    <span class="s5">#custo produto</span>
+    <span class="s1">custo </span><span class="s2">= </span><span class="s1">tabela</span><span class="s2">.</span><span class="s1">loc</span><span class="s2">[</span><span class="s1">linha</span><span class="s2">, </span><span class="s4">'custo'</span><span class="s2">]</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s1">str</span><span class="s2">(</span><span class="s1">custo</span><span class="s2">))</span>
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+    <span class="s5">#obs produto</span>
+    <span class="s1">obs </span><span class="s2">= </span><span class="s1">tabela</span><span class="s2">.</span><span class="s1">loc</span><span class="s2">[</span><span class="s1">linha</span><span class="s2">, </span><span class="s4">'obs'</span><span class="s2">]</span>
+
+    <span class="s0">if not </span><span class="s1">pandas</span><span class="s2">.</span><span class="s1">isna</span><span class="s2">(</span><span class="s1">obs</span><span class="s2">):</span>
+        <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">write</span><span class="s2">(</span><span class="s1">str</span><span class="s2">(</span><span class="s1">obs</span><span class="s2">))</span>
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'tab'</span><span class="s2">)</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">press</span><span class="s2">(</span><span class="s4">'enter'</span><span class="s2">)</span>
+
+    <span class="s1">time</span><span class="s2">.</span><span class="s1">sleep</span><span class="s2">(</span><span class="s3">1</span><span class="s2">)</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">scroll</span><span class="s2">(</span><span class="s3">5000</span><span class="s2">)</span>
+
+    <span class="s1">pyautogui</span><span class="s2">.</span><span class="s1">click</span><span class="s2">(</span><span class="s1">x</span><span class="s2">=</span><span class="s3">653</span><span class="s2">, </span><span class="s1">y</span><span class="s2">=</span><span class="s3">437</span><span class="s2">)</span>
+
+
+</pre>
+</body>
+</html>
